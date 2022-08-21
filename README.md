@@ -5,7 +5,11 @@ A Scala console augmented by GreenTea
 
 GreenTea.Cloud propose plusieurs canaux de distribution.
 
-## Local
+## Docker
+
+>  docker run -it greenteacloud/greentea_worksheet:latest
+
+## Local depuis ce dépôt
 
 Le build.sbt de ce repertoire est configurer pour lancer GreenTea en console sbt.
 
@@ -15,8 +19,9 @@ Le build.sbt de ce repertoire est configurer pour lancer GreenTea en console sbt
 3. Vous placer dedans et entrer
 > sbt console
 
-## Docker
+## Dans votre projet
 
->  docker run -it greenteacloud/greentea_worksheet:latest
+Ajouter a votre build.sbt :
 
-
+>   resolvers += Resolver.sonatypeOssRepos("snapshots"),
+>  libraryDependencies += "cloud.greentea" %% "greentea" % "3.0.0-SNAPSHOT"
