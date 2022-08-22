@@ -23,5 +23,5 @@ Le build.sbt de ce repertoire est configurer pour lancer GreenTea en console sbt
 
 Ajouter a votre build.sbt :
 
->   resolvers += Resolver.sonatypeOssRepos("snapshots"),
+>       resolvers +="Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 >  libraryDependencies += "cloud.greentea" %% "greentea" % "3.0.0-SNAPSHOT"

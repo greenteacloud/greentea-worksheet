@@ -2,7 +2,7 @@ FROM  archlinux
 
 RUN pacman -Sy --noconfirm sbt jdk17-openjdk jre17-openjdk-headless
 
-COPY ../build.sbt .
+COPY build.sbt-docker build.sbt
 
 RUN sbt -Dsbt.rootdir=true compile
 
