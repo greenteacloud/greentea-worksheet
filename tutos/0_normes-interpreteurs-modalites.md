@@ -1,9 +1,10 @@
- L'objet central de GreenTea est la norme.
 
 
+@author Sylvain Ductor, 2022
 
 # Norme
 
+ L'objet central de GreenTea est la norme.
 Une norme est:
 
 - Une fonction d'un type *A* vers un type *B*,

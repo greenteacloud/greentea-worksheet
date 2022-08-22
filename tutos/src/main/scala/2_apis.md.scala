@@ -1,4 +1,12 @@
   /*
+```scala
+*/
+import cloud.greentea.{*,given}
+import cats.effect.std.Console
+import cats.effect._
+import cats.{~> as -->, arrow as ar, *}
+/*
+```
 
 # API
 
@@ -80,7 +88,7 @@ Tant une présource qu'un prépuit sont des alias de prénormes et se comporte d
     val entry : Maybe[String] = //devrait être Often
         console_reader.yes.exec.getResult()
         
-    console_printer.yes.execWith(s"yo $entry").run()
+    console_printer.yes.execWith(s"Il a écrit : $entry").run()
 /*
 ```
 
@@ -105,12 +113,11 @@ Les environnement sbt console et scastie sont connus pour être limité au nivea
 
 ```scala
 */
-@main def main_tuto_api = tuto_api
+@main
+def main_tuto_api = tuto_api
 /*
 ```
 
-
-/*
-```
+*/
 
 

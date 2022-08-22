@@ -1,7 +1,18 @@
-
 /*
 
-# Déclaration
+```scala
+*/
+import cloud.greentea.{*,given}
+import cats.{~> as -->, *}
+import cats.data._
+/*
+```
+
+# Prenormes
+
+@author Sylvain Ductor, 2022
+
+## Déclaration
 
 
 
@@ -49,7 +60,7 @@ Le type d'une prenorme se décompose en deux parties :
 
 
 
-# Assemblage
+## Assemblage
 
 
 
@@ -81,7 +92,7 @@ val addOneOrAddTwo      = addOne ior (addOne andThen addOne)
 
 
 
-# Construction de normes
+## Construction de normes
 
 
 
@@ -118,7 +129,7 @@ Nous fournissons quelques alias:
 
 
 
-# Execution
+## Execution
 
 C'est à son execution que le canal d'agent concerné est déclaré. Plusieurs routines ont été définies pour faciliter l'appel d'une norme. Nous présentons ici `execWith` qui ne considère pas de canal d'agent. Le autres seront introduites dans le tuto sur les holons.
 
@@ -128,11 +139,11 @@ val addOne_simple  = addOne.yes.execWith(1)
 
 val addOne_couple  = addOne2Couple.yes.execWith((1,2))
 
-val addOne_xor     = addOneORAddThree.yes.execWith(1.left)
+val addOne_xor     = addOneORAddThree.yes.execWith(Left(1))// (1.left)
 
-val addOne_ior     = addOneOrAddTwo.yes.execWith((2.right)
+val addOne_ior     = addOneOrAddTwo.yes.execWith(Ior.Right(2)) //(2.right)
 
-val addOne_ior     = addOneOrAddTwo.yes.execWith((1,2))
+val addOne_iorB     = addOneOrAddTwo.yes.execWith(Ior.Both(1,2))
 
 val addOne_andthen = addThree.yes.execWith(1)
 /*
@@ -142,7 +153,7 @@ Une fois l'entrée chargée, les valeurs ci-dessus sont virtuellement des résul
 
 ```scala
 */
-println(addOne_simple.getResult())
+//@main def tuto_prenorme = println(addOne_simple.getResult())
 /*
 ```
 
