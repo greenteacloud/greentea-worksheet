@@ -25,6 +25,7 @@ L'implémentation à été conçus par maximiser la malléabilité et la réexpo
 - ρ : le type des données. Ainsi une norme n'est pas une fonction de *A => B* mais plutôt de *ρ[A] => ρ[B]*. ρ peut matérialiser le fait que A peut résulter d'un calcul et par là être une exception, peut être une liste d'objet, une distribution statistique, un accès distant, un objet crypter homomorphiquement,  …,
 - κ, le pendant de ρ pour les données logique (γ, λ),
 - φ : l'environnement de calcul. Immédiat ou paresseux, sur une plateforme tel que Jade ou Akka ou sur une infrastructure tel que Cuda ou JNI,
+- ψ : l'extracteur qui permet d'obtenir une valeur depuis l'environnement de calcul,
 - |> : le canal de communication,
 - η, Ω, les *holons* faisant de cette norme un contrat. Ils généralisent les fonctions définient entre tout couples d'agents en une fonction définit pour la société grâce à la spécification d'un protocole de consensus (e.g. calcul parallèle, vote, contract-net protocol, etc)
 - ε : l'environnement partagé par les agents impliqué dans le contrat résultant de l'utilisation de la norme. Il doit être accessible en lecture et en écriture, et cela de façom individualisé à chaque couple d'agent,

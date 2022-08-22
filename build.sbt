@@ -1,6 +1,6 @@
 
 lazy val root = project
-  .in(file("."))
+  .in(file("tutos"))
   .settings(
     name := "GreenTeaWorksheet",
     organization := "cloud.greentea",

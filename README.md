@@ -5,6 +5,12 @@ A Scala console augmented by GreenTea
 
 GreenTea.Cloud propose plusieurs canaux de distribution.
 
+## Scastie
+
+Scastie permet de tester GreenTea en ligne depuis votre navigateur.
+
+TODO
+
 ## Docker
 
 >  docker run -it greenteacloud/greentea_worksheet:latest
