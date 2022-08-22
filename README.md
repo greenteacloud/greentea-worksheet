@@ -24,7 +24,9 @@ TODO
 
 ## Docker
 
->  docker run -it  --name greentea greenteacloud/greentea_worksheet:latest
+```
+docker run -it  --name greentea greenteacloud/greentea_worksheet:latest
+```
 
 Une fois lancé vous obtiendrez l'invite de commande `sbt`
 Deux commandes sont d'intérêt:
