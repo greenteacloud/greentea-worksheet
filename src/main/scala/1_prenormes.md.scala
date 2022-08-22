@@ -153,7 +153,8 @@ Une fois l'entrée chargée, les valeurs ci-dessus sont virtuellement des résul
 
 ```scala
 */
-//@main def tuto_prenorme = println(addOne_simple.getResult())
+@main
+def run_tuto_prenorme = println(addOne_simple.getResult())
 /*
 ```
 

@@ -114,7 +114,7 @@ Les environnement sbt console et scastie sont connus pour être limité au nivea
 ```scala
 */
 @main
-def main_tuto_api = tuto_api
+def run_tuto_api = tuto_api
 /*
 ```
 
