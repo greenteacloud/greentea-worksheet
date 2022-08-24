@@ -8,6 +8,7 @@ RUN sbt -Dsbt.rootdir=true compile
 
 CMD ["sbt", "-Dsbt.rootdir=true"]
 
+
+#sudo docker build --rm -f "Dockerfile" -t greenteacloud/greentea_worksheet:latest  "."
 #docker login
-#docker tag greentea:latest greenteacloud/greentea_worksheet:latest
 #docker push greenteacloud/greentea_worksheet:latest
