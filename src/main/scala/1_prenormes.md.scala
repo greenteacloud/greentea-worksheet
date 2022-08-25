@@ -44,7 +44,7 @@ val addOne_fromCompact = increment_compact.~>[Int,Int]
 /*
 ```
 
-Le type de retour est automatiquement calculé. Il est possible de le spécifier explicitement, mais ceci est plus laborieux pour le programmeur. Cependant, s'il le spécifie il peut choisir de ne pas fournir l'annotation:
+Le type d'une prénorme est automatiquement calculé. Il est possible de le spécifier explicitement, mais ceci est plus laborieux pour le programmeur. Cependant, s'il le spécifie il peut choisir de ne pas fournir l'annotation:
 
 
 ```scala

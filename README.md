@@ -6,9 +6,9 @@ A Scala console augmented by GreenTea
 
 `tutos/whitePaper_GreenTea.pdf` presente une vue d'ensemble des fonctionalités actuelles et en cours d'intégration.
 
-`tutos/0_normes-interpreteurs-modalites.md` introduit les concepts les plus centraux
+`tutos/` introduit les concepts les plus centraux et presente les différentes fonctionalités gravitant autours de ces concepts centraux à travers une série de feuilles de code commenté.  Chaque tuto a été pensé pour être didactique et essentialiste.
 
-`/src/main/scala/*` presente les différentes fonctionalités gravitant autours de ces concepts centraux à travers une série de feuilles de code commenté.  Chaque tuto a été pensé pour être didactique et essentialiste.
+La plupart des tutos sont executables. Voir : `/src/main/scala/*`
 
 Ce dépôt fournit un environnement Scala augmenté par GreenTea permettant ainsi de tester par vous même les commandes décrites dans les tutoriels ou celles qui vous interesse. La méthode préférée est pour l'instant Docker, mais une solution SAAS est en cours d'intégration.
 

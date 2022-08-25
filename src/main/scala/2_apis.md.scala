@@ -88,11 +88,11 @@ Tant une présource qu'un prépuit sont des alias de prénormes et se comporte d
     val entry : Maybe[String] = //devrait être Often
         console_reader.yes.exec.getResult()
 
-    console_printer.yes.execWith(s"Il a écrit : $entry").run()
+    console_printer.yes.execWith(s"Il a écrit : $entry").getResult()
 /*
 ```
 
-Une norme peut charger une api en lecture écriture ou les deux. Son type est alors modifié de façon cohérente ?. Elle devient une source si elle charge l'api en lecture, un puit si elle la charge en écriture ou un effet (`(∅ ~> ∅)`) si elle charge les deux. Ainsi, les différentes flèches de la catégorie de Ductor (norme, source, puit, effet) forment une cloture transitive. Sous forme d'effet la norme est dite «indépendante», elle est capable d'obtenir par elle même son type d'entrée et de sortie et peut alors s'assembler avec d'autres normes plus librement. En effet «Les monades sont des monoides dans la catégorie des endofuncteurs».
+Une norme peut charger une api en lecture écriture ou les deux. Son type est alors modifié de façon cohérente. Elle devient une source si elle charge l'api en lecture, un puit si elle la charge en écriture ou un effet `(∅ ~> ∅)` si elle charge les deux. Ainsi, les différentes flèches de la catégorie de Ductor (norme, source, puit, effet) forment une cloture transitive. Sous forme d'effet la norme est dite «indépendante», elle est capable d'obtenir par elle même son entrée et sa sortie et peut alors s'assembler avec d'autres normes plus librement. En effet «Les monades sont des monoides dans la catégorie des endofuncteurs» : un calcul complexe peut s'écrire en juxtaposant des effets sans se soucier de leur continuité contextuelle.
 
 ```scala
 */
@@ -106,7 +106,7 @@ Une norme peut charger une api en lecture écriture ou les deux. Son type est al
 /*
 ```
 
-En l'absence de type d'entrée, `exec` est utilisé en place de `execWith` pour tranformer virtuellement la norme en son résultat.
+En l'absence d'entrée, `exec` (sans paramètre) est utilisé en place de `execWith` pour tranformer virtuellement la norme en son résultat.
 
 
 Les environnements sbt console et scastie sont connus pour être limités au niveau de la lecture en console. Le programme ci-dessus peut être correctement exécuté avec `sbt run` qui va checher la définition annotée par @main et executer son contenu, c'est-à-dire charger l'objet en l'executant ligne par ligne
